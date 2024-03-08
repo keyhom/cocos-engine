@@ -1,3 +1,4 @@
+import { Texture2DArray } from './texture-2d-array';
 /*
  Copyright (c) 2013-2016 Chukong Technologies Inc.
  Copyright (c) 2017-2023 Xiamen Yaji Software Co., Ltd.
@@ -34,6 +35,7 @@ export { TextAsset } from './text-asset';
 export { default as JsonAsset } from './json-asset';
 export { ImageAsset } from './image-asset';
 export { Texture2D } from './texture-2d';
+export { Texture2DArray } from './texture-2d-array';
 export { TextureCube } from './texture-cube';
 export { EffectAsset } from './effect-asset';
 export type { IMaterialInfo } from './material';
