@@ -1,4 +1,3 @@
-import { Texture2DArray } from './texture-2d-array';
 /*
  Copyright (c) 2013-2016 Chukong Technologies Inc.
  Copyright (c) 2017-2023 Xiamen Yaji Software Co., Ltd.

@@ -34,6 +34,7 @@ export { TextAsset } from './text-asset';
 export { default as JsonAsset } from './json-asset';
 export { ImageAsset } from './image-asset';
 export { Texture2D } from './texture-2d';
+export { Texture2DArray } from './texture-2d-array';
 export { TextureCube } from './texture-cube';
 export { EffectAsset } from './effect-asset';
 export { Material } from './material';

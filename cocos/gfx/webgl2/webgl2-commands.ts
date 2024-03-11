@@ -2877,6 +2877,28 @@ export function WebGL2CmdFuncCopyTexImagesToTexture (
         }
         break;
     }
+    case gl.TEXTURE_2D_ARRAY: {
+        for (let k = 0; k < regions.length; k++) {
+            const region = regions[k];
+            const fcount = region.texSubres.baseArrayLayer + region.texSubres.layerCount;
+            for (f = region.texSubres.baseArrayLayer; f < fcount; ++f) {
+                gl.texSubImage3D(
+                    gl.TEXTURE_2D_ARRAY,
+                    region.texSubres.mipLevel,
+                    region.texOffset.x,
+                    region.texOffset.y,
+                    f, // region.texOffset.z,
+                    region.texExtent.width,
+                    region.texExtent.height,
+                    region.texExtent.depth,
+                    gpuTexture.glFormat,
+                    gpuTexture.glType,
+                    texImages[n++],
+                );
+            }
+        }
+        break;
+    }
     case gl.TEXTURE_CUBE_MAP: {
         for (let k = 0; k < regions.length; k++) {
             const region = regions[k];

@@ -217,6 +217,7 @@
         "cc.Texture2D",
         "cc.TextureBase",
         "cc.TextureCube",
+        "cc.Texture2DArray",
         "cc.Toggle",
         "cc.ToggleComponent",
         "cc.ToggleContainer",
