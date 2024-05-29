@@ -2032,6 +2032,8 @@ cocos_source_files(
     cocos/core/assets/TextureBase.h
     cocos/core/assets/TextureCube.cpp
     cocos/core/assets/TextureCube.h
+    cocos/core/assets/Texture2DArray.h
+    cocos/core/assets/Texture2DArray.cpp
     cocos/core/assets/BitmapFont.h
     cocos/core/assets/BitmapFont.cpp
     cocos/core/assets/Font.h
@@ -3347,7 +3349,7 @@ set(COCOS_SOURCE_LIST_EXCLUDE_GENRATED ${COCOS_SOURCE_LIST})
 set(COCOS_GENERATED_LIST)
 foreach(src IN LISTS COCOS_SOURCE_LIST_EXCLUDE_GENRATED)
     get_source_file_property(IS_GENERATED ${src} GENERATED)
-    if(IS_GENERATED) 
+    if(IS_GENERATED)
         list(REMOVE_ITEM COCOS_SOURCE_LIST_EXCLUDE_GENRATED ${src})
         list(APPEND COCOS_GENERATED_LIST ${src})
     endif()

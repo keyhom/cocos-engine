@@ -58,6 +58,7 @@
 %ignore cc::IMemoryImageSource::compressed;
 %ignore cc::SimpleTexture::uploadDataWithArrayBuffer;
 %ignore cc::TextureCube::_mipmaps;
+%ignore cc::Texture2DArray::_mipmaps;
 // %ignore cc::Mesh::copyAttribute;
 // %ignore cc::Mesh::copyIndices;
 %ignore cc::Material::setProperty;
@@ -230,6 +231,7 @@
 %include "core/assets/SimpleTexture.h"
 %include "core/assets/Texture2D.h"
 %include "core/assets/TextureCube.h"
+%include "core/assets/Texture2DArray.h"
 %include "core/assets/RenderTexture.h"
 %include "core/assets/BufferAsset.h"
 %include "core/assets/EffectAsset.h"

@@ -37,3 +37,4 @@
 #include "core/assets/TextAsset.h"
 #include "core/assets/Texture2D.h"
 #include "core/assets/TextureCube.h"
+#include "core/assets/Texture2DArray.h"
