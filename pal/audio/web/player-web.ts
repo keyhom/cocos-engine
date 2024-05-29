@@ -428,7 +428,7 @@ export class AudioPlayerWeb implements OperationQueueable {
         this._sourceNode.onended = this._onEnded;
         /* doing it manually for now */
         const checkEnded = (): void => {
-            if (this.loop) {
+            if (this._audioBuffer && this.loop) {
                 this._currentTimer = window.setTimeout(checkEnded, this._audioBuffer.duration * 1000);
             } else {  // do ended
                 this._audioTimer.stop();
@@ -437,7 +437,11 @@ export class AudioPlayerWeb implements OperationQueueable {
             }
         };
         window.clearTimeout(this._currentTimer);
-        this._currentTimer = window.setTimeout(checkEnded, (this._audioBuffer.duration - this._audioTimer.currentTime) * 1000);
+
+        if (this._audioBuffer)
+            this._currentTimer = window.setTimeout(checkEnded, (this._audioBuffer.duration - this._audioTimer.currentTime) * 1000);
+        else
+            checkEnded();
     }
 
     private _stopSourceNode (): void {
