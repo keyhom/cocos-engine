@@ -12,12 +12,12 @@ struct ITexture2DCreateInfo;
 
 using ITexture2DArrayCreateInfo = ITexture2DCreateInfo;
 
-using ITexture2DArrayMipmaps = ccstd::vector<IntrusivePtr<ImageAsset>>;
-// struct ITexture2DArrayMipmaps {
-    // ccstd::vector<IntrusivePtr<ImageAsset>> slices;
-// };
+// using ITexture2DArrayMipmaps = ccstd::vector<IntrusivePtr<ImageAsset>>;
+struct ITexture2DArrayMipmaps {
+    ccstd::vector<IntrusivePtr<ImageAsset>> slices;
+};
 
-// using ITexture2DArrayMipmapData = ccstd::vector<ccstd::string>;
+using ITexture2DArrayMipmapData = ccstd::vector<ccstd::string>;
 
 struct Texture2DArraySerializeData {
     ccstd::string base;
@@ -38,8 +38,8 @@ public:
     static Texture2DArray *create(const ccstd::vector<Texture2D *> &textures, uint32_t slicesCount);
 
     size_t getSlicesCount() const {
-        return (!this->_mipmaps.empty() && !this->_mipmaps[0].empty()) ? this->_mipmaps[0].size() : 0;
-        // return (!_mipmaps.empty() && !_mipmaps[0].slices.empty()) ? _mipmaps[0].slices.size() : 0;
+        // return (!this->_mipmaps.empty() && !this->_mipmaps[0].empty()) ? this->_mipmaps[0].size() : 0;
+        return (!_mipmaps.empty() && !_mipmaps[0].slices.empty()) ? _mipmaps[0].slices.size() : 0;
     }
 
     const ccstd::vector<ITexture2DArrayMipmaps> &getMipmaps() const {
@@ -48,7 +48,7 @@ public:
 
     void setMipmaps(const ccstd::vector<ITexture2DArrayMipmaps> &value);
 
-    void setMipmapsForJs(const ccstd::vector<ITexture2DArrayMipmaps> &value);
+    void setMipmapsForJS(const ccstd::vector<ITexture2DArrayMipmaps> &value);
 
     const ITexture2DArrayMipmaps *getImage() const {
         return _mipmaps.empty() ? nullptr : &_mipmaps.at(0);

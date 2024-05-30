@@ -1345,6 +1345,19 @@ export function patch_cc_TextureCube(ctx: cc_TextureCube_Context_Args, apply = d
   apply(() => { $.ccclass('cc.TextureCube')(TextureCube); }, 'ccclass', null);
 } // end of patch_cc_TextureCube
 
+//---- class cc_Texture2DArray
+interface cc_Texture2DArray_Context_Args {
+    Texture2DArray: any;
+}
+
+export function patch_cc_Texture2DArray(ctx: cc_Texture2DArray_Context_Args, apply = defaultExec) {
+    const { Texture2DArray } = { ... ctx};
+    apply( () => { $.serializable(Texture2DArray.prototype, '_mipmaps', () => {
+        return [];
+    }); }, 'serializable', '_mipmaps');
+    apply(() => { $.ccclass('cc.Texture2DArray')(Texture2DArray); }, 'ccclass', null);
+} // end of patch_cc_Texture2DArray
+
 //---- class cc_Vertex
 interface cc_Vertex_Context_Args {
    Vertex: any;

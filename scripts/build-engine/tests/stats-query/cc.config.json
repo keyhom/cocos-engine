@@ -1,6 +1,6 @@
 {
     "$schema": "./cc.config.schema.json",
-    
+
     "features": {
         "base": { "modules": [ "base" ], "dependentAssets": ["0835f102-5471-47a3-9a76-01c07ac9cdb2", "b5475517-23b9-4873-bc1a-968d96616081", "0ed97c56-390e-4dd1-96b7-e7f2d93a98ed", "b23391b6-52eb-46a6-8da1-6244d9d315fb"] },
         "gfx-webgl": { "modules": [ "gfx-webgl" ] },
@@ -91,6 +91,7 @@
                 "cocos/core/assets/texture-asset.ts": "cocos/core/assets/texture-asset.jsb.ts",
                 "cocos/core/assets/texture-2d.ts": "cocos/core/assets/texture-2d.jsb.ts",
                 "cocos/core/assets/texture-cube.ts": "cocos/core/assets/texture-cube.jsb.ts",
+                "cocos/core/assets/texture-2d-array.ts": "cocos/core/assets/texture-2d-array.jsb.ts",
                 "cocos/core/assets/material.ts": "cocos/core/assets/material.jsb.ts",
                 "cocos/core/assets/rendering-sub-mesh.ts": "cocos/core/assets/rendering-sub-mesh.jsb.ts",
                 "cocos/3d/assets/mesh.ts":"cocos/3d/assets/mesh.jsb.ts",

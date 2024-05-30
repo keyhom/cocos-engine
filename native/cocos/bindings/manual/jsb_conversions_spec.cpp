@@ -858,6 +858,11 @@ bool sevalue_to_native(const se::Value &from, cc::MaterialProperty *to, se::Obje
                 return true;
             }
 
+            if (0 == strcmp(name, "Texture2DArray")) {
+                *to = reinterpret_cast<cc::Texture2DArray *>(obj->getPrivateData());
+                return true;
+            }
+
             if (0 == strcmp(name, "RenderTexture")) {
                 *to = reinterpret_cast<cc::RenderTexture *>(obj->getPrivateData());
                 return true;

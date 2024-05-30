@@ -15,7 +15,7 @@
                 "external/win32/include",
                 "external/win32/include/v8"
             ],
-            "compileCommands": "${workspaceFolder}/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
     "version": 4

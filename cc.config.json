@@ -138,8 +138,8 @@
         "xr": {
             "modules": ["xr"]
         },
-        "light-probe": { 
-            "modules": [ "light-probe" ] 
+        "light-probe": {
+            "modules": [ "light-probe" ]
         },
         "terrain": {
             "modules": ["terrain"],
@@ -165,7 +165,7 @@
         },
         "dragon-bones": {
             "modules": ["dragon-bones"],
-            "dependentAssets":[ 
+            "dependentAssets":[
                 "c27215d8-6835-4b68-bfbb-bdeac6100c04",
                 "b5d6115f-0370-4d7c-aad3-c194cc71cf98"
             ],
@@ -274,6 +274,7 @@
                 "cocos/asset/assets/texture-base.ts": "cocos/asset/assets/texture-base.jsb.ts",
                 "cocos/asset/assets/texture-2d.ts": "cocos/asset/assets/texture-2d.jsb.ts",
                 "cocos/asset/assets/texture-cube.ts": "cocos/asset/assets/texture-cube.jsb.ts",
+                "cocos/asset/assets/texture-2d-array.ts": "cocos/asset/assets/texture-2d-array.jsb.ts",
                 "cocos/asset/assets/material.ts": "cocos/asset/assets/material.jsb.ts",
                 "cocos/asset/assets/rendering-sub-mesh.ts": "cocos/asset/assets/rendering-sub-mesh.jsb.ts",
                 "cocos/3d/assets/mesh.ts": "cocos/3d/assets/mesh.jsb.ts",
@@ -427,7 +428,7 @@
             "value": false,
             "internal": false,
             "dynamic": false
-        },        
+        },
         "OHOS": {
             "comment": "Running in OHOS platform",
             "type": "boolean",
@@ -695,7 +696,7 @@
             "rangeMax", "rangeStep", "slide", "displayOrder", "unit", "radian", "multiline", "disallowAnimation",
             "requireComponent", "executionOrder", "disallowMultiple", "allowReplicated", "ccclass"
         ],
-        
+
         "editorDecorators": [
             "executeInEditMode", "menu", "playOnFocus", "inspector", "icon", "help", "editable", "visible",
             "readOnly", "displayName", "tooltip", "group", "range", "rangeMin", "rangeMax", "rangeStep", "slide",
